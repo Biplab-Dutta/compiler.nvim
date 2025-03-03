@@ -17,7 +17,7 @@ function M.action(selected_option)
   local entry_point = vim.fn.expand("%:p")
   local files = entry_point
   local output_dir = utils.os_path(vim.fn.getcwd())
-  local output = utils.os_path(vim.fn.getcwd())
+  local output = utils.os_path(vim.fn.getcwd() .. "/program")
   local arguments = ""
   local final_message = "--task finished--"
 
