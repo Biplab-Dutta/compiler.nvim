@@ -29,13 +29,7 @@ function M.action(selected_option)
         tasks = {
           {
             name = '- Build & run program → "' .. entry_point .. '"',
-            cmd = 'rm -f "'
-              .. output
-              .. '" || true' -- clean
-              .. ' && mkdir -p "'
-              .. output_dir
-              .. '"' -- mkdir
-              .. " && gcc "
+            cmd = "gcc "
               .. files
               .. ' -o "'
               .. output
@@ -64,13 +58,8 @@ function M.action(selected_option)
         tasks = {
           {
             name = '- Build program → "' .. entry_point .. '"',
-            cmd = 'rm -f "'
-              .. output
-              .. '" || true' -- clean
-              .. ' && mkdir -p "'
-              .. output_dir
-              .. '"' -- mkdir
-              .. " && gcc "
+
+            cmd = "gcc "
               .. files
               .. ' -o "'
               .. output
