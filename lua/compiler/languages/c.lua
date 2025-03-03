@@ -23,7 +23,7 @@ function M.action(selected_option)
   local files = entry_point
   local output_dir = utils.os_path(vim.fn.getcwd())
   local output = utils.os_path(
-    vim.fn.getcwd() .. M.getFileNameWithoutExtension(entry_point)
+    vim.fn.getcwd() .. "/" .. M.getFileNameWithoutExtension(entry_point)
   )
   local arguments = ""
   local final_message = "--task finished--"
