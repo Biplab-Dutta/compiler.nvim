@@ -131,13 +131,7 @@ function M.action(selected_option)
         arguments = variables.arguments or arguments -- optional
         task = {
           name = '- Build program → "' .. entry_point .. '"',
-          cmd = 'rm -f "'
-            .. output
-            .. '" || true' -- clean
-            .. ' && mkdir -p "'
-            .. output_dir
-            .. '"' -- mkdir
-            .. " && gcc "
+          cmd = "gcc "
             .. files
             .. ' -o "'
             .. output
